@@ -16,12 +16,15 @@ import {
 } from "lucide-react";
 
 const whatsapp = "https://wa.me/5575987021018";
+const instagram = "https://www.instagram.com/cr__vidracaria/";
 
+// Feito por Gustavo Assunção da Silva
 const heroImage = {
   src: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85",
   alt: "Ambiente moderno com portas e janelas de vidro",
 };
 
+// Feito por Gustavo Assunção da Silva
 const services = [
   {
     title: "Box para banheiro",
@@ -63,6 +66,7 @@ const navLinks = [
 ];
 
 function BrandMark({ compact = false }) {
+  // Feito por Gustavo Assunção da Silva
   return (
     <a className={`brand-mark ${compact ? "brand-mark--compact" : ""}`} href="#inicio">
       <span className="brand-emblem">CR</span>
@@ -96,6 +100,7 @@ function Header() {
 }
 
 function Footer() {
+  // Feito por Gustavo Assunção da Silva
   return (
     <footer className="footer footer--dark" id="contato">
       <div className="shell footer-grid">
@@ -114,7 +119,7 @@ function Footer() {
           <span>
             <MapPin size={16} /> Feira de Santana e região
           </span>
-          <a href="https://instagram.com" target="_blank" rel="noreferrer">
+          <a href={instagram} target="_blank" rel="noreferrer">
             <Instagram size={16} /> Instagram
           </a>
         </div>
@@ -133,6 +138,7 @@ function Footer() {
 }
 
 function GlassLanding() {
+  // Feito por Gustavo Assunção da Silva
   return (
     <div className="page page-glass">
       <div className="glass-bg" aria-hidden="true" />
@@ -257,6 +263,7 @@ function GlassLanding() {
 }
 
 export default function App() {
+  // Feito por Gustavo Assunção da Silva
   useEffect(() => {
     const blockContextMenu = (event) => {
       event.preventDefault();
