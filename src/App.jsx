@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   ArrowRight,
   CheckCircle2,
@@ -125,7 +125,9 @@ function Footer() {
           <span>Guarda-corpo e manutencao</span>
         </div>
       </div>
-      <div className="footer-bottom">© 2026 CR Vidraçaria. Todos os direitos reservados.</div>
+      <div className="footer-bottom">
+        © 2026 CR Vidraçaria. Todos os direitos reservados. Reprodução não autorizada proibida.
+      </div>
     </footer>
   );
 }
@@ -255,5 +257,17 @@ function GlassLanding() {
 }
 
 export default function App() {
+  useEffect(() => {
+    const blockContextMenu = (event) => {
+      event.preventDefault();
+    };
+
+    document.addEventListener("contextmenu", blockContextMenu);
+
+    return () => {
+      document.removeEventListener("contextmenu", blockContextMenu);
+    };
+  }, []);
+
   return <GlassLanding />;
 }
