@@ -1180,9 +1180,7 @@ button {
   }
 
   .stats-strip,
-  .testimonials,
   .classic-services,
-  .service-grid,
   .yellow-service-grid,
   .about-features,
   .footer-grid,
@@ -1192,6 +1190,48 @@ button {
 
   .stats-strip {
     transform: none;
+  }
+
+  .service-grid,
+  .testimonials {
+    display: flex;
+    gap: 16px;
+    width: calc(100vw - 14px);
+    margin-left: 0;
+    padding: 4px 14px 18px 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-padding-left: 0;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .service-grid::-webkit-scrollbar,
+  .testimonials::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .service-grid::-webkit-scrollbar-track,
+  .testimonials::-webkit-scrollbar-track {
+    background: rgba(7, 26, 60, 0.08);
+    border-radius: 999px;
+  }
+
+  .service-grid::-webkit-scrollbar-thumb,
+  .testimonials::-webkit-scrollbar-thumb {
+    background: rgba(0, 74, 173, 0.35);
+    border-radius: 999px;
+  }
+
+  .service-card,
+  .testimonials article {
+    flex: 0 0 min(82vw, 320px);
+    min-height: 250px;
+    scroll-snap-align: start;
+  }
+
+  .testimonials {
+    padding-top: 4px;
   }
 
   .yellow-copy {
